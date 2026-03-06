@@ -50,7 +50,7 @@ async function fetchNasaData(url) {
     }
 }
 
-function keyApiKey(){
+async function keyApiKey(){
     try {
         const options = {method: "POST"};
         const res = await fetch("https://proxy-key-t0ox.onrender.com/get-key3", options);
@@ -78,7 +78,7 @@ function render(nasaData){
 
      const img = document.createElement("img")
      img.src = nasaData.url
-     img.src = nasaData.title
+     img.alt = nasaData.title
 
      resultsDiv.appendChild(h2);
      resultsDiv.appendChild(dateP);
